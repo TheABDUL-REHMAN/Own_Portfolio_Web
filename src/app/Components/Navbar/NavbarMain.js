@@ -69,7 +69,7 @@ const NavbarMain = () => {
                     <li key={index} className="relative group">
                       <Link 
                         href={`/${item.section}`} 
-                        className={`relative px-1 py-2 text-sm font-medium transition-colors duration-300 ${isActive ? 'text-purple-300' : 'text-gray-300 hover:text-white'}`}
+                        className={`relative px-1 py-2 text-lg font-medium transition-colors duration-300 ${isActive ? 'text-purple-300' : 'text-gray-300 hover:text-white'}`}
                       >
                         {item.link}
                         {isActive && (
