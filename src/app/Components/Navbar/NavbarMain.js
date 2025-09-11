@@ -49,13 +49,13 @@ const NavbarMain = () => {
                 <Image
                   src="/pm.png"
                   alt="Profile"
-                  width={100}
-                  height={100}
-                  className="rounded-full mr-3 border"
+                  width={40}
+                  height={40}
+                  className="rounded-full mr-2 border w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"
                   priority
                 />
-                <span className="text-3xl font-bold text-white">
-                  ABDUL <span className="text-purple-400">REHMAN</span>
+                <span className="text-lg sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+                  ABDUL REHMAN
                 </span>
               </motion.div>
             </Link>

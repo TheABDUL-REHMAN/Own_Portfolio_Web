@@ -153,30 +153,30 @@ const ContactForm = () => {
                   </motion.div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Social/Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6 }}
-            className="space-y-8"
+            className="space-y-8 w-full"
           >
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-white">Connect Directly</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">Connect Directly</h3>
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-purple-500 transition-all">
-                  <div className="p-3 bg-purple-500/10 rounded-lg text-purple-400">
+                <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-blue-500 transition-all">
+                  <div className="p-3 bg-blue-500/10 rounded-lg text-blue-400">
                     <FiMail className="w-6 h-6" />
                   </div>
-                  <a href="mailto:abdulrehman03044642422@gmail.com" className="text-white hover:text-purple-300 transition-colors text-lg">
+                  <a href="mailto:abdulrehman03044642422@gmail.com" className="text-white hover:text-blue-300 transition-colors text-lg break-all">
                     abdulrehman03044642422@gmail.com
                   </a>
                 </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-purple-500 transition-all">
-                  <div className="p-3 bg-purple-500/10 rounded-lg text-purple-400">
+                <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-blue-500 transition-all">
+                  <div className="p-3 bg-blue-500/10 rounded-lg text-blue-400">
                     <FiPhone className="w-6 h-6" />
                   </div>
-                  <a href="tel:+923044642422" className="text-white hover:text-purple-300 transition-colors text-lg">
+                  <a href="tel:+923044642422" className="text-white hover:text-blue-300 transition-colors text-lg break-all">
                     +92 304 4642422
                   </a>
                 </div>
@@ -184,8 +184,8 @@ const ContactForm = () => {
             </div>
 
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-white">Follow My Journey</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-white">Follow My Journey</h3>
+              <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
                 {socialLinks.map((social, i) => (
                   <motion.a
                     key={i}
@@ -194,7 +194,7 @@ const ContactForm = () => {
                     rel="noopener noreferrer"
                     whileHover={{ y: -5, scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`${social.color} w-12 h-12 rounded-full flex items-center justify-center text-white text-xl transition-all`}
+                    className={`${social.color} w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-white text-xl transition-all`}
                   >
                     {social.icon}
                   </motion.a>
