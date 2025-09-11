@@ -8,18 +8,20 @@ export default function HeroSection() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(200);
-  const toRotate = ["Web Developer", "UI/UX Designer", "MERN Stack Developer"];
+  const toRotate = ["Web Developer", "MERN Stack Developer", "UI/UX Designer"];
   const period = 2000;
   const heroRef = useRef(null);
   const particlesRef = useRef(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  
+  const [windowWidth, setWindowWidth] = useState(1200); // default value for SSR
+  const [windowHeight, setWindowHeight] = useState(800);
+
   // Parallax effect values
-  const x1 = useTransform(mouseX, [0, typeof window !== 'undefined' ? window.innerWidth : 0], [-20, 20]);
-  const x2 = useTransform(mouseX, [0, typeof window !== 'undefined' ? window.innerWidth : 0], [20, -20]);
-  const y1 = useTransform(mouseY, [0, typeof window !== 'undefined' ? window.innerHeight : 0], [-10, 10]);
-  const y2 = useTransform(mouseY, [0, typeof window !== 'undefined' ? window.innerHeight : 0], [10, -10]);
+  const x1 = useTransform(mouseX, [0, windowWidth], [-20, 20]);
+  const x2 = useTransform(mouseX, [0, windowWidth], [20, -20]);
+  const y1 = useTransform(mouseY, [0, windowHeight], [-10, 10]);
+  const y2 = useTransform(mouseY, [0, windowHeight], [10, -10]);
 
   // Initialize particles
   const initParticles = useCallback(() => {
@@ -177,7 +179,7 @@ export default function HeroSection() {
           className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
         >
           <span className="inline-block">
-            Hi, I&#39;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Asma Khokhar</span>
+            Hi, I&#39;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">ABDUL REHMAN</span>
           </span>
           <br />
           <span className="inline-flex items-center">

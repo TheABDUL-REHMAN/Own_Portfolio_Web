@@ -12,10 +12,16 @@ export default function Home() {
       <div className='font-body bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white min-h-screen'>
         <NavbarMain />
         <Hero/>
-        <AboutSection/>
+        <section id="about">
+          <AboutSection/>
+        </section>
         <SkillsMain/>
-        <ServicesSection/>
-        <Contact />
+        <section id="services">
+          <ServicesSection/>
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
       <Footer />
 

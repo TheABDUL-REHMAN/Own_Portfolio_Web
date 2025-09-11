@@ -80,7 +80,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            Technologies I&#39;ve mastered through years of professional experience and personal projects
+            Technologies I&#39;ve mastered through year of professional experience and personal projects
           </motion.p>
         </motion.div>
       <div className="max-w-7xl mx-auto">
@@ -97,8 +97,8 @@ export default function AboutSection() {
           >
             <div className="relative overflow-hidden">
               <Image
-                src="/ab-img.png" 
-                alt="hero image"
+                src="/pm.png" 
+                alt="boy image"
                 width={500}
                 height={500}
                 className="object-cover border"
@@ -119,9 +119,9 @@ export default function AboutSection() {
             
 
             <p className="text-lg :text-white">
-              Passionate web developer with 2 years of experience creating modern,
-              responsive websites and web applications. I specialize in Next.js,
-              React, and Tailwind CSS to deliver exceptional user experiences.
+              Passionate web developer with 1 year of experience creating modern,
+              responsive websites and web applications. I specialize in Node.js,
+              React, and MongoDB CSS to deliver exceptional user experiences.
             </p>
 
             <div className="space-y-4">

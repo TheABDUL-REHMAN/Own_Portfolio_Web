@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import { GiHamburgerMenu, GiCrossMark } from "react-icons/gi";
+import Image from 'next/image';
 
 const NavbarMain = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,11 +21,11 @@ const NavbarMain = () => {
   }, []);
 
   const Links = [
-    { link: 'Home', section: 'home' },
-    { link: 'About', section: 'about' },
-    { link: 'Services', section: 'services' },
-    { link: 'Portfolio', section: 'portfolio' },
-    { link: 'Contact', section: 'contact' },
+    { link: 'Home', section: '#' },
+    { link: 'About', section: '#about' },
+    { link: 'Services', section: '#services' },
+    { link: 'Portfolio', section: '#portfolio' },
+    { link: 'Contact', section: '#contact' },
   ];
 
   return (
@@ -44,8 +45,17 @@ const NavbarMain = () => {
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center"
               >
+                {/* Add image here */}
+                <Image
+                  src="/pm.png"
+                  alt="Profile"
+                  width={100}
+                  height={100}
+                  className="rounded-full mr-3 border"
+                  priority
+                />
                 <span className="text-3xl font-bold text-white">
-                  Asma <span className="text-purple-400">Khokhar</span>
+                  ABDUL <span className="text-purple-400">REHMAN</span>
                 </span>
               </motion.div>
             </Link>
@@ -148,4 +158,4 @@ const NavbarMain = () => {
   );
 };
 
-export default NavbarMain;    
+export default NavbarMain;

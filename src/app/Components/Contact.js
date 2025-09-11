@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useMotionTemplate, useMotionValue, animate } from "framer-motion";
 import { FiUser, FiMail, FiPhone, FiMessageSquare } from "react-icons/fi";
 import { FaPaperPlane, FaCheck, FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
@@ -64,28 +64,39 @@ const ContactForm = () => {
   };
 
   const socialLinks = [
-    { icon: <FaGithub />, url: "https://github.com/Asmakhokhar", color: "bg-gray-800 hover:bg-gray-700" },
-    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/asma-ismail-28445a2a4/", color: "bg-blue-600 hover:bg-blue-700" },
-    { icon: <FaTwitter />, url: "https://x.com/Asma_Khokhar_", color: "bg-black hover:bg-gray-800" },
-    { icon: <FaInstagram />, url: "https://www.instagram.com/asmak.web/", color: "bg-gradient-to-tr from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600" },
-    { icon: <FaFacebook />, url: "https://web.facebook.com/profile.php?id=61556637118609", color: "bg-blue-700 hover:bg-blue-800" },
+    { icon: <FaGithub />, url: "https://github.com/ABDULREHMAN135711", color: "bg-gray-800 hover:bg-gray-700" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/abdulrehman-r-98b182253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", color: "bg-blue-600 hover:bg-blue-700" },
+    { icon: <FaTwitter />, url: "https://x.com/ABDUL REHMAN_", color: "bg-black hover:bg-gray-800" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/itz_._abdulrehman?igsh=MTM2cDhpMWh6c3ltMA==", color: "bg-gradient-to-tr from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600" },
+    { icon: <FaFacebook />, url: "https://www.facebook.com/share/1CFtMgQJBw/", color: "bg-blue-700 hover:bg-blue-800" },
   ];
+
+  const [particleStyles, setParticleStyles] = useState([]);
+
+  useEffect(() => {
+    // Only run on client
+    const arr = [];
+    for (let i = 0; i < 30; i++) {
+      arr.push({
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        width: Math.random() * 300 + 100,
+        height: Math.random() * 300 + 100,
+        filter: 'blur(60px)'
+      });
+    }
+    setParticleStyles(arr);
+  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4  overflow-hidden py-20 border-none">
       {/* Floating particles background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {particleStyles.map((style, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full bg-purple-500 opacity-10"
-            initial={{ 
-              x: Math.random() * 100,
-              y: Math.random() * 100,
-              width: Math.random() * 300 + 100,
-              height: Math.random() * 300 + 100,
-              filter: 'blur(60px)'
-            }}
+            initial={style}
             animate={{
               x: [null, (Math.random() - 0.5) * 100],
               y: [null, (Math.random() - 0.5) * 100],
@@ -157,16 +168,16 @@ const ContactForm = () => {
                   <div className="p-3 bg-purple-500/10 rounded-lg text-purple-400">
                     <FiMail className="w-6 h-6" />
                   </div>
-                  <a href="mailto:asma.khokharr@gmail.com" className="text-white hover:text-purple-300 transition-colors text-lg">
-                    asma.khokharr@gmail.com
+                  <a href="mailto:abdulrehman03044642422@gmail.com" className="text-white hover:text-purple-300 transition-colors text-lg">
+                    abdulrehman03044642422@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-4 p-4 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-purple-500 transition-all">
                   <div className="p-3 bg-purple-500/10 rounded-lg text-purple-400">
                     <FiPhone className="w-6 h-6" />
                   </div>
-                  <a href="tel:+923707638774" className="text-white hover:text-purple-300 transition-colors text-lg">
-                    +92 370 7638774
+                  <a href="tel:+923044642422" className="text-white hover:text-purple-300 transition-colors text-lg">
+                    +92 304 4642422
                   </a>
                 </div>
               </div>
@@ -257,7 +268,7 @@ const ContactForm = () => {
                       value={formData.name}
                       onChange={handleChange}
                       className={`w-full pl-10 pr-4 py-3 bg-gray-800/30 border ${errors.name ? "border-red-500" : "border-gray-700 hover:border-purple-500"} rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300`}
-                      placeholder="Asma Khokhar"
+                      placeholder="ABDUL REHMAN"
                     />
                     {errors.name && (
                       <motion.p
@@ -287,7 +298,7 @@ const ContactForm = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full pl-10 pr-4 py-3 bg-gray-800/30 border ${errors.email ? "border-red-500" : "border-gray-700 hover:border-purple-500"} rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300`}
-                      placeholder="asma@example.com"
+                      placeholder="abdulrehman@example.com"
                     />
                     {errors.email && (
                       <motion.p

@@ -23,15 +23,15 @@ const SkillsSection = () => {
       color: "text-orange-400", 
       bg: "bg-orange-500/10",
       level: "Expert",
-      years: "2 years"
+      years: "1 years"
     },
     { 
       name: "CSS3", 
       icon: <FaCss3Alt className="w-full h-full" />, 
       color: "text-blue-500", 
       bg: "bg-blue-500/10",
-      level: "Expert",
-      years: "2 years"
+      level: "Beginner",
+      years: "1 years"
     },
     { 
       name: "JavaScript", 
@@ -39,7 +39,7 @@ const SkillsSection = () => {
       color: "text-yellow-400", 
       bg: "bg-yellow-400/10",
       level: "Expert",
-      years: "2 years"
+      years: "1 years"
     },
    
     { 
@@ -47,16 +47,16 @@ const SkillsSection = () => {
       icon: <FaReact className="w-full h-full" />, 
       color: "text-cyan-400", 
       bg: "bg-cyan-400/10",
-      level: "Expert",
-      years: "2 years"
+      level: "beginner",
+      years: "6 months"
     },
     { 
       name: "Next.js", 
       icon: <SiNextdotjs className="w-full h-full" />, 
       color: "text-white", 
       bg: "bg-white/10",
-      level: "Intermediate",
-      years: "1 year"
+      level: "beginner",
+      years: "1 month"
     },
     { 
       name: "Tailwind", 
@@ -96,8 +96,8 @@ const SkillsSection = () => {
       icon: <FaGitAlt className="w-full h-full" />, 
       color: "text-orange-600", 
       bg: "bg-orange-400/10",
-      level: "Expert",
-      years: "2 years"
+      level: "Beginner",
+      years: "1 years"
     },
   ];
 
@@ -166,7 +166,7 @@ const SkillsSection = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            Technologies I&#39;ve mastered through years of professional experience and personal projects
+            Technologies I&#39;ve mastered through years of professional experience and personal projects.
           </motion.p>
         </motion.div>
 
@@ -236,9 +236,15 @@ const SkillsSection = () => {
                     <motion.div
                       className={`h-full ${skill.color.replace('text', 'bg')} rounded-full`}
                       initial={{ width: 0 }}
-                      whileInView={{ width: 
-                        skill.level === "Expert" ? "80%" : 
-                        skill.level === "Intermediate" ? "65%" : "50%"
+                      whileInView={{
+                        width:
+                          skill.level === "Expert"
+                            ? "80%"
+                            : skill.level === "Intermediate"
+                            ? "65%"
+                            : skill.level === "Beginner"
+                            ? "40%"
+                            : "20%"
                       }}
                       transition={{ delay: index * 0.1 + 0.5, duration: 1 }}
                     />

@@ -38,11 +38,11 @@ export default function Footer() {
 
   // Social links with animation variants
   const socialLinks = [
-    { icon: <FaGithub className="h-5 w-5" />, href: "https://github.com/Asmakhokhar", label: "GitHub" },
-    { icon: <FaLinkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/asma-ismail-28445a2a4/", label: "LinkedIn" },
-    { icon: <FaTwitter className="h-5 w-5" />, href: "https://x.com/Asma_Khokhar_", label: "Twitter" },
-    { icon: <FaInstagram className="h-5 w-5" />, href: "https://www.instagram.com/asmak.web/", label: "Instagram" },
-    { icon: <FaFacebook className="h-5 w-5" />, href: "https://web.facebook.com/profile.php?id=61556637118609", label: "Facebook" }
+    { icon: <FaGithub className="h-5 w-5" />, href: "https://github.com/ABDULREHMAN135711", label: "GitHub" },
+    { icon: <FaLinkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/abdulrehman-r-98b182253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn" },
+    { icon: <FaTwitter className="h-5 w-5" />, href: "https://twitter.com/ABDULREHMAN", label: "Twitter" },
+    { icon: <FaInstagram className="h-5 w-5" />, href: "https://www.instagram.com/itz_._abdulrehman?igsh=MTM2cDhpMWh6c3ltMA==", label: "Instagram" },
+    { icon: <FaFacebook className="h-5 w-5" />, href: "https://www.facebook.com/muzamm.l.603229?rdid=eJ13AXtHK4AhxbVB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CFtMgQJBw%2F#", label: "Facebook" }
   ];
 
   // Stable particle positions using useMemo
@@ -134,7 +134,7 @@ export default function Footer() {
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
-                  Asma Khokhar
+                  ABDUL REHMAN
                 </div>
               </div>
               <p className="text-purple-100/80 text-lg leading-relaxed">
@@ -170,16 +170,16 @@ export default function Footer() {
                   <svg className="h-5 w-5 mt-0.5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <Link href="mailto:asma.khokharr@gmail.com" className="hover:underline hover:text-white transition-colors">
-                    asma.khokharr@gmail.com
+                  <Link href="mailto:abdulrehman03044642422@gmail.com" className="hover:underline hover:text-white transition-colors">
+                    abdulrehman03044642422@gmail.com
                   </Link>
                 </p>
                 <p className="flex items-start gap-3">
                   <svg className="h-5 w-5 mt-0.5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <Link href="tel:+923707638774" className="hover:underline hover:text-white transition-colors">
-                    +92 370 7638774
+                  <Link href="tel:+923044642422" className="hover:underline hover:text-white transition-colors">
+                    +92 304 4642422
                   </Link>
                 </p>
               </div>
@@ -228,7 +228,7 @@ export default function Footer() {
             className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
           >
             <p className="text-purple-100/70 text-sm">
-              &copy; {currentYear} Asma Khokhar. All rights reserved.
+              &copy; {currentYear} ABDUL REHMAN. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-purple-100/70 hover:text-white text-sm transition-colors">

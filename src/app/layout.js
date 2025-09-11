@@ -17,15 +17,15 @@ const comfortaa = Comfortaa({
 });
 
 export const metadata = {
-  title: "Ak | Web Developer",
-  description: "Personal expertise website of Asma Khokhar, showcasing skills, services, and portfolio with a smooth, animated, and responsive design.",
+  title: "AR | Web Developer",
+  description: "Personal expertise website of ABDUL REHMAN, showcasing skills, services, and portfolio with a smooth, animated, and responsive design.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Ak | Web Developer</title>
+        <title>AR | Web Developer</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${comfortaa.variable} antialiased`}
