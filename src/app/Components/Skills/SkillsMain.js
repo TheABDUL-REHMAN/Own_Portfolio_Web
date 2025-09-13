@@ -110,7 +110,7 @@ const SkillsSection = () => {
   const hoverBackground = useMotionTemplate`radial-gradient(300px circle at ${mouseX}px ${mouseY}px, rgba(124, 58, 237, 0.3), transparent 80%)`;
 
   return (
-    <section className="relative py-28 px-4 sm:px-6 lg:px-8  overflow-hidden" id="skills">
+    <section className="relative py-28 px-4 sm:px-6 lg:px-8  overflow-hidden" id="Skills">
       {/* Floating particles */}
       {isMounted && [...Array(15)].map((_, i) => (
         <motion.div
