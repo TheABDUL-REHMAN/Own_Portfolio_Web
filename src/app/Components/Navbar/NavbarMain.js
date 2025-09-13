@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -23,8 +24,8 @@ const NavbarMain = () => {
   const Links = [
     { link: 'Home', section: '#' },
     { link: 'About', section: '#about' },
+    { link: 'Skills', section: '#Skills' },
     { link: 'Services', section: '#services' },
-    { link: 'Portfolio', section: '#portfolio' },
     { link: 'Contact', section: '#contact' },
   ];
 
