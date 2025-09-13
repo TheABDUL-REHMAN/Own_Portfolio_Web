@@ -328,7 +328,7 @@ const ContactForm = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full pl-10 pr-4 py-3 bg-gray-800/30 border border-gray-700 hover:border-purple-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                      placeholder="+92 300 1234567"
+                      placeholder="+92 304 4642422"
                     />
                   </div>
                 </motion.div>
