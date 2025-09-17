@@ -50,7 +50,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="py-25 px-4 sm:px-6 lg:px-8  "
+      className="py-32 px-4 sm:px-6 lg:px-8 scroll-mt-20"
       ref={ref}
     >
       <motion.div

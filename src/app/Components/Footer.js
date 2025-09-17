@@ -48,14 +48,12 @@ export default function Footer() {
   // Stable particle positions using useMemo
   const particles = useMemo(() => {
     return Array.from({ length: 15 }).map((_, i) => {
-      // Deterministic positions based on index
-      const angle = (i * 137.5) % 360; // Golden angle distribution
-      const distance = 30 + (i % 20);
+      // Completely deterministic positions based on index
       return {
         id: i,
         size: `${100 + (i % 4) * 50}px`,
-        left: `${50 + Math.cos(angle * Math.PI / 180) * distance}%`,
-        top: `${50 + Math.sin(angle * Math.PI / 180) * distance}%`,
+        left: `${(i * 15) % 100}%`,
+        top: `${(i * 10) % 100}%`,
         blur: '60px',
         opacity: 0.1
       };
