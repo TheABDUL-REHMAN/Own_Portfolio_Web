@@ -42,15 +42,7 @@ export default function HeroSection() {
     setWindowHeight(window.innerHeight);
   }, []);
 
-  // Text animation
-  useEffect(() => {
-    let ticker = setInterval(() => tick(), delta);
-    return () => clearInterval(ticker);
-  }, [text, delta, tick]);
-    
-  }, [text, delta, tick]);
-
-  const tick = () => {
+  const tick = useCallback(() => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
     let updatedText = isDeleting
@@ -68,7 +60,13 @@ export default function HeroSection() {
       setLoopNum(loopNum + 1);
       setDelta(200);
     }
-  };
+  }, [loopNum, isDeleting, text, toRotate, period]);
+
+  // Text animation
+  useEffect(() => {
+    let ticker = setInterval(() => tick(), delta);
+    return () => clearInterval(ticker);
+  }, [tick, delta]);
 
   // Handle mouse movement for parallax
   const handleMouseMove = (e) => {
