@@ -22,6 +22,7 @@ const SkillsSection = () => {
       icon: <FaHtml5 className="w-full h-full" />, 
       color: "text-orange-400", 
       bg: "bg-orange-500/10",
+      progressColor: "bg-orange-400",
       level: "Expert",
       years: "1 years"
     },
@@ -30,6 +31,7 @@ const SkillsSection = () => {
       icon: <FaCss3Alt className="w-full h-full" />, 
       color: "text-blue-500", 
       bg: "bg-blue-500/10",
+      progressColor: "bg-blue-500",
       level: "Beginner",
       years: "1 years"
     },
@@ -38,6 +40,7 @@ const SkillsSection = () => {
       icon: <IoLogoJavascript className="w-full h-full" />, 
       color: "text-yellow-400", 
       bg: "bg-yellow-400/10",
+      progressColor: "bg-yellow-400",
       level: "Expert",
       years: "1 years"
     },
@@ -47,7 +50,8 @@ const SkillsSection = () => {
       icon: <FaReact className="w-full h-full" />, 
       color: "text-cyan-400", 
       bg: "bg-cyan-400/10",
-      level: "beginner",
+      progressColor: "bg-cyan-400",
+      level: "Beginner",
       years: "6 months"
     },
     { 
@@ -55,7 +59,8 @@ const SkillsSection = () => {
       icon: <SiNextdotjs className="w-full h-full" />, 
       color: "text-white", 
       bg: "bg-white/10",
-      level: "beginner",
+      progressColor: "bg-white",
+      level: "Beginner",
       years: "1 month"
     },
     { 
@@ -63,6 +68,7 @@ const SkillsSection = () => {
       icon: <RiTailwindCssFill className="w-full h-full" />, 
       color: "text-cyan-300", 
       bg: "bg-cyan-300/10",
+      progressColor: "bg-cyan-300",
       level: "Intermediate",
       years: "1 year"
     },
@@ -71,6 +77,7 @@ const SkillsSection = () => {
       icon: <FaNodeJs className="w-full h-full" />, 
       color: "text-green-400", 
       bg: "bg-green-500/10",
+      progressColor: "bg-green-400",
       level: "Intermediate",
       years: "1 year"
     },
@@ -79,6 +86,7 @@ const SkillsSection = () => {
       icon: <SiExpress className="w-full h-full" />, 
       color: "text-gray-300", 
       bg: "bg-gray-300/10",
+      progressColor: "bg-gray-300",
       level: "Intermediate",
       years: "1 year"
     },
@@ -87,6 +95,7 @@ const SkillsSection = () => {
       icon: <SiMongodb className="w-full h-full" />, 
       color: "text-green-400", 
       bg: "bg-green-400/10",
+      progressColor: "bg-green-400",
       level: "Intermediate",
       years: "1 year"
     },
@@ -96,6 +105,7 @@ const SkillsSection = () => {
       icon: <FaGitAlt className="w-full h-full" />, 
       color: "text-orange-600", 
       bg: "bg-orange-400/10",
+      progressColor: "bg-orange-600",
       level: "Beginner",
       years: "1 years"
     },
@@ -110,7 +120,7 @@ const SkillsSection = () => {
   const hoverBackground = useMotionTemplate`radial-gradient(300px circle at ${mouseX}px ${mouseY}px, rgba(124, 58, 237, 0.3), transparent 80%)`;
 
   return (
-    <section className="relative py-28 px-4 sm:px-6 lg:px-8  overflow-hidden" id="skills">
+    <section className="relative py-28 px-4 sm:px-6 lg:px-8  overflow-hidden" id="Skills">
       {/* Floating particles */}
       {isMounted && [...Array(15)].map((_, i) => (
         <motion.div
