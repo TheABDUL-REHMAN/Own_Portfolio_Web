@@ -8,7 +8,6 @@ export default function HeroSection() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(200);
-  const toRotate = ["Web Developer", "MERN Stack Developer", "UI/UX Designer"];
   const period = 2000;
   const heroRef = useRef(null);
   const particlesRef = useRef(null);
@@ -43,6 +42,7 @@ export default function HeroSection() {
   }, []);
 
   const tick = useCallback(() => {
+    const toRotate = ["Web Developer", "MERN Stack Developer", "UI/UX Designer"];
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
     let updatedText = isDeleting
@@ -60,7 +60,7 @@ export default function HeroSection() {
       setLoopNum(loopNum + 1);
       setDelta(200);
     }
-  }, [loopNum, isDeleting, text, toRotate, period]);
+  }, [loopNum, isDeleting, text, period]);
 
   // Text animation
   useEffect(() => {
