@@ -47,6 +47,8 @@ export default function HeroSection() {
     let ticker = setInterval(() => tick(), delta);
     return () => clearInterval(ticker);
   }, [text, delta, tick]);
+    
+  }, [text, delta, tick]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
