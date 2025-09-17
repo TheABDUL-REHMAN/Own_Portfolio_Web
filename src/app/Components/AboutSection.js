@@ -98,7 +98,7 @@ export default function AboutSection() {
           >
             <div className="relative overflow-hidden">
               <Image
-                src="/pm.png" 
+                src="/PM.png" 
                 alt="boy image"
                 width={500}
                 height={500}

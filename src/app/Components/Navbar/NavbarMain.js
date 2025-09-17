@@ -48,7 +48,7 @@ const NavbarMain = () => {
               >
                 {/* Add image here */}
                 <Image
-                  src="/pm.png"
+                  src="/PM.png"
                   alt="Profile"
                   width={40}
                   height={40}
