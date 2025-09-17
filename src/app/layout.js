@@ -27,6 +27,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>AR | Web Developer</title>
+        <link rel="preload" href="/PM.png" as="image" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${comfortaa.variable} antialiased`}

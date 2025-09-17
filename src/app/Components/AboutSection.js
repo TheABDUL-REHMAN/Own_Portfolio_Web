@@ -103,7 +103,9 @@ export default function AboutSection() {
                 width={500}
                 height={500}
                 className="object-cover border"
-                priority
+                loading="lazy"
+                quality={75}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 mix-blend-multiply" />
               <div className="absolute -inset-4 border-2 border-purple-400/30 rounded-2xl" />

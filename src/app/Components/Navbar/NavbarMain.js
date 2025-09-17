@@ -50,10 +50,11 @@ const NavbarMain = () => {
                 <Image
                   src="/PM.png"
                   alt="Profile"
-                  width={40}
-                  height={40}
+                  width={64}
+                  height={64}
                   className="rounded-full mr-2 border w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"
                   priority
+                  sizes="(max-width: 768px) 40px, (max-width: 1024px) 48px, 64px"
                 />
                 <span className="text-lg sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
                   ABDUL REHMAN

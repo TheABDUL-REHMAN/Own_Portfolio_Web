@@ -23,65 +23,24 @@ export default function HeroSection() {
   const y1 = useTransform(mouseY, [0, windowHeight], [-10, 10]);
   const y2 = useTransform(mouseY, [0, windowHeight], [10, -10]);
 
-  // Initialize particles
-  const initParticles = useCallback(() => {
-    const canvas = particlesRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-
-    const particles = [];
-    const particleCount = 100;
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.random() * 2 + 1,
-        speedX: (Math.random() - 0.5) * 0.3,
-        speedY: (Math.random() - 0.5) * 0.3,
-        color: `rgba(168, 85, 247, ${Math.random() * 0.5 + 0.1})`
-      });
-    }
-
-    const animateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      particles.forEach(particle => {
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.fill();
-
-        // Move particles
-        particle.x += particle.speedX;
-        particle.y += particle.speedY;
-
-        // Boundary check
-        if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= 1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= 1;
-      });
-
-      requestAnimationFrame(animateParticles);
-    };
-
-    animateParticles();
-  }, []);
+  // Static particles to prevent hydration mismatch
+  const particles = [
+    { id: 0, size: 3, left: 10, top: 20, duration: 15 },
+    { id: 1, size: 4, left: 80, top: 10, duration: 18 },
+    { id: 2, size: 2, left: 30, top: 70, duration: 12 },
+    { id: 3, size: 5, left: 60, top: 40, duration: 20 },
+    { id: 4, size: 3, left: 90, top: 80, duration: 14 },
+    { id: 5, size: 4, left: 20, top: 90, duration: 16 },
+    { id: 6, size: 2, left: 70, top: 30, duration: 13 },
+    { id: 7, size: 6, left: 40, top: 60, duration: 19 },
+    { id: 8, size: 3, left: 85, top: 50, duration: 17 },
+    { id: 9, size: 4, left: 15, top: 80, duration: 15 }
+  ];
 
   useEffect(() => {
-    initParticles();
-    const handleResize = () => {
-      const canvas = particlesRef.current;
-      if (canvas) {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [initParticles]);
+    setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
+  }, []);
 
   // Text animation
   useEffect(() => {
@@ -141,11 +100,20 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden "
       onMouseMove={handleMouseMove}
     >
-      {/* Particle Canvas */}
-      <canvas 
-        ref={particlesRef} 
-        className="absolute inset-0 z-0 w-full h-full pointer-events-none"
-      />
+      {/* Lightweight CSS Particles */}
+      {particles.map(particle => (
+        <div
+          key={particle.id}
+          className="absolute rounded-full bg-purple-400 opacity-20 animate-pulse"
+          style={{
+            width: `${particle.size}px`,
+            height: `${particle.size}px`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`,
+            animationDuration: `${particle.duration}s`
+          }}
+        />
+      ))}
      
       <motion.div 
         className="absolute bottom-20 right-20 w-72 h-72 bg-indigo-600 rounded-full filter blur-3xl opacity-10"
