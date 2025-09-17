@@ -22,19 +22,7 @@ export default function HeroSection() {
   const y1 = useTransform(mouseY, [0, windowHeight], [-10, 10]);
   const y2 = useTransform(mouseY, [0, windowHeight], [10, -10]);
 
-  // Static particles to prevent hydration mismatch
-  const particles = [
-    { id: 0, size: 3, left: 10, top: 20, duration: 15 },
-    { id: 1, size: 4, left: 80, top: 10, duration: 18 },
-    { id: 2, size: 2, left: 30, top: 70, duration: 12 },
-    { id: 3, size: 5, left: 60, top: 40, duration: 20 },
-    { id: 4, size: 3, left: 90, top: 80, duration: 14 },
-    { id: 5, size: 4, left: 20, top: 90, duration: 16 },
-    { id: 6, size: 2, left: 70, top: 30, duration: 13 },
-    { id: 7, size: 6, left: 40, top: 60, duration: 19 },
-    { id: 8, size: 3, left: 85, top: 50, duration: 17 },
-    { id: 9, size: 4, left: 15, top: 80, duration: 15 }
-  ];
+
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -100,20 +88,12 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden "
       onMouseMove={handleMouseMove}
     >
-      {/* Lightweight CSS Particles */}
-      {particles.map(particle => (
-        <div
-          key={particle.id}
-          className="absolute rounded-full bg-purple-400 opacity-20 animate-pulse"
-          style={{
-            width: `${particle.size}px`,
-            height: `${particle.size}px`,
-            left: `${particle.left}%`,
-            top: `${particle.top}%`,
-            animationDuration: `${particle.duration}s`
-          }}
-        />
-      ))}
+      {/* Defer particles to improve FCP */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute w-2 h-2 bg-purple-400 rounded-full" style={{left: '10%', top: '20%'}} />
+        <div className="absolute w-3 h-3 bg-purple-400 rounded-full" style={{left: '80%', top: '10%'}} />
+        <div className="absolute w-2 h-2 bg-purple-400 rounded-full" style={{left: '30%', top: '70%'}} />
+      </div>
      
       <motion.div 
         className="absolute bottom-20 right-20 w-72 h-72 bg-indigo-600 rounded-full filter blur-3xl opacity-10"
@@ -144,7 +124,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight hero-text critical-above-fold"
         >
           <span className="inline-block">
             Hi, I&#39;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">ABDUL REHMAN</span>
