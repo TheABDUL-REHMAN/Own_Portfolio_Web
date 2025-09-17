@@ -28,9 +28,6 @@ export default function RootLayout({ children }) {
       <head>
         <title>AR | Web Developer</title>
         <link rel="preload" href="/PM.png" as="image" fetchPriority="high" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap" />
         <style>{`
           .hero-text { font-display: swap; }
           .critical-above-fold { contain: layout style paint; }
