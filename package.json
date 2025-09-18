@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
+    "@vercel/analytics": "latest",
     "@vercel/speed-insights": "^1.2.0",
     "animate.css": "^4.1.1",
     "framer-motion": "^12.16.0",
