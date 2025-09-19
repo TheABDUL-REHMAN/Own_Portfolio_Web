@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono, Comfortaa } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "./ReduxProvider";
-import { SpeedInsights } from "@vercel/speed-insights/next"; 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"; 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
           {children}
         </ReduxProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
