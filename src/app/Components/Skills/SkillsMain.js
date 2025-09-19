@@ -24,7 +24,7 @@ const SkillsSection = () => {
       bg: "bg-orange-500/10",
       progressColor: "bg-orange-400",
       level: "Expert",
-      years: "1 years"
+      years: "3 years"
     },
     { 
       name: "CSS3", 
@@ -32,8 +32,8 @@ const SkillsSection = () => {
       color: "text-blue-500", 
       bg: "bg-blue-500/10",
       progressColor: "bg-blue-500",
-      level: "Beginner",
-      years: "1 years"
+      level: "Intermediate",
+      years: "2 years"
     },
     { 
       name: "JavaScript", 
@@ -61,7 +61,7 @@ const SkillsSection = () => {
       bg: "bg-white/10",
       progressColor: "bg-white",
       level: "Beginner",
-      years: "1 month"
+      years: "4 month"
     },
     { 
       name: "Tailwind", 
@@ -106,8 +106,8 @@ const SkillsSection = () => {
       color: "text-orange-600", 
       bg: "bg-orange-400/10",
       progressColor: "bg-orange-600",
-      level: "Beginner",
-      years: "1 years"
+      level: "Expert",
+      years: "3 years"
     },
   ];
 

@@ -4,6 +4,7 @@ export default {
     './src/components/**/*.{js,ts,jsx,tsx}',
 
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '350px',
