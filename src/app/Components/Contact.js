@@ -64,7 +64,7 @@ const ContactForm = () => {
   };
 
   const socialLinks = [
-    { icon: <FaGithub />, url: "https://github.com/ABDULREHMAN135711", color: "bg-gray-800 hover:bg-gray-700" },
+    { icon: <FaGithub />, url: "https://github.com/TheABDUL-REHMAN", color: "bg-gray-800 hover:bg-gray-700" },
     { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/abdulrehman-r-98b182253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", color: "bg-blue-600 hover:bg-blue-700" },
     { icon: <FaTwitter />, url: "https://x.com/ABDUL REHMAN_", color: "bg-black hover:bg-gray-800" },
     { icon: <FaInstagram />, url: "https://www.instagram.com/itz_._abdulrehman?igsh=MTM2cDhpMWh6c3ltMA==", color: "bg-gradient-to-tr from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600" },

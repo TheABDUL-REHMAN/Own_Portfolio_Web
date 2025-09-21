@@ -92,13 +92,15 @@ const NavbarMain = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link 
-                  href="#contact" 
+                <a 
+                  href="https://wa.me/923044642422" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-medium shadow-lg hover:shadow-purple-500/30 transition-all duration-300 group"
                 >
                   Let&#39;s Connect
                   <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </motion.div>
             </div>
 
@@ -144,13 +146,15 @@ const NavbarMain = () => {
                 );
               })}
               <div className="px-3 pt-2">
-                <Link
-                  href="#contact"
+                <a
+                  href="https://wa.me/923044642422"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full px-4 py-2 text-center rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium shadow-md"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Let&#39;s Connect
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

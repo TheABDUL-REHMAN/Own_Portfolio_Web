@@ -38,7 +38,7 @@ export default function Footer() {
 
   // Social links with animation variants
   const socialLinks = [
-    { icon: <FaGithub className="h-5 w-5" />, href: "https://github.com/ABDULREHMAN135711", label: "GitHub" },
+    { icon: <FaGithub className="h-5 w-5" />, href: "https://github.com/TheABDUL-REHMAN", label: "GitHub" },
     { icon: <FaLinkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/abdulrehman-r-98b182253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn" },
     { icon: <FaTwitter className="h-5 w-5" />, href: "https://twitter.com/ABDULREHMAN", label: "Twitter" },
     { icon: <FaInstagram className="h-5 w-5" />, href: "https://www.instagram.com/itz_._abdulrehman?igsh=MTM2cDhpMWh6c3ltMA==", label: "Instagram" },
